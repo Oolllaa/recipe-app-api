@@ -1,4 +1,4 @@
-FROM python:3.10.4-alpine3.14
+FROM python:3.9-alpine3.14
 LABEL maintainer="sandraaleks"
 
 ENV PYTHONUNBUFFERED 1
@@ -23,6 +23,6 @@ RUN python -m venv /py && \
     adduser \
         --disabled-password \
         --no-create-home \
-        django-user && \
+        django-user
 ENV PATH="/py/bin:$PATH"
 USER django-user
